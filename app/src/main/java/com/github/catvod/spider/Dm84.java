@@ -139,7 +139,7 @@ public class Dm84 extends Spider {
             String sourceName = source.text();
             Elements playList = sourceList.get(i).select("a");
             List<String> vodItems = new ArrayList<>();
-            for (int j = 0; j < playList.size(); j++) {
+            for (int j = playList.size() - 1; j >= 0; j--) {
                 Element e = playList.get(j);
                 vodItems.add(e.text() + "$" + e.attr("href"));
             }
